@@ -1,47 +1,68 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
   <div class="container">
-    <a class="navbar-brand" href="#">So Jesus Salva</a>
+    <a class="navbar-brand fw-bold" href="#">So Jesus Salva</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="#">Cultos e Eventos</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Obreiros</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Membros</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Departamentos</a></li>
-        <li class="nav-item"><a class="btn btn-outline-light ms-2" href="#">Login</a></li>
+        <li class="nav-item">
+          <a class="btn btn-outline-light ms-3" href="#">Login</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
-
-<!-- Hero Section -->
-<section class="py-5 text-center bg-light">
-  <div class="container">
-    <h1 class="display-4">Guy Hawkins</h1>
-    <p class="lead">Connecting Devs with Employers</p>
-    <p class="text-muted">Software Engineer</p>
-    <p class="mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
-    <div class="input-group mb-3 w-50 mx-auto">
-      <input type="text" class="form-control" placeholder="Try Java Developer, React Dev etc." aria-label="Input Label">
-      <button class="btn btn-primary" type="button">Find A Developer</button>
-    </div>
+<!-- Seção do Convite com título acima da imagem -->
+<section class="convite-section text-center">
+  <div class="convite-titulo mb-4">
+    <h2 class="fw-bold">Casamento</h2>
+    <p class="fs-4">Dia 10 de maio as 20:00 </p>
+    <p class="fs-4">Diácono José Bispo e Diaconisa Nilda</p>
   </div>
+  <img src="assets/photos/convite.jpg" alt="Convite Especial" class="img-fluid convite-img">
 </section>
 
-<!-- Reviews Section -->
-<section class="py-5">
-  <div class="container text-center">
-    <h2 class="mb-4">Trusted by 50k+ users</h2>
-    <div class="mb-2">
-      <span class="fs-1">4.1/5</span>
-    </div>
-    <p class="text-muted">(14k Reviews)</p>
-    <div class="mt-4">
-      <h5>Leslie Alexander</h5>
-      <p class="text-muted">HR Manager, Groove</p>
+<!-- Tabela de Cultos -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-4">Agenda de Cultos</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center align-middle">
+        <thead class="table-primary">
+          <tr>
+            <th>Dia</th>
+            <th>Descrição</th>
+            <th>Horário</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Quarta-feira</td>
+            <td>Culto de Ensino</td>
+            <td>19:30</td>
+          </tr>
+          <tr>
+            <td>Sexta-feira</td>
+            <td>Culto de Libertação</td>
+            <td>19:30</td>
+          </tr>
+          <tr>
+            <td>Sábado</td>
+            <td>Consagração</td>
+            <td>08:00</td>
+          </tr>
+          <tr>
+            <td>Domingo</td>
+            <td>Culto da Família</td>
+            <td>19:00</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
