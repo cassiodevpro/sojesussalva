@@ -1,0 +1,30 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+  <div class="card p-4 shadow" style="width: 100%; max-width: 400px;">
+    <h3 class="text-center mb-4">Login</h3>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" id="email" class="form-control" formControlName="email">
+        <div class="text-danger" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+          E-mail inválido.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" id="senha" class="form-control" formControlName="senha">
+        <div class="text-danger" *ngIf="loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched">
+          A senha é obrigatória.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Entrar</button>
+    </form>
+
+    <!-- Botão de voltar -->
+    <div class="text-center mt-3">
+      <button class="btn btn-outline-secondary w-100" (click)="voltar()">Voltar para Início</button>
+    </div>
+  </div>
+</div>
