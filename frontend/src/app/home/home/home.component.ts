@@ -4,15 +4,16 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-
-  constructor(
-    public router: Router
-  ) {}
+  constructor(public router: Router) {}
 
   irParaConstrucao(): void {
     this.router.navigate(['construcao']);
+  }
+
+  logar(): void {
+    this.router.navigate(['login']);
   }
 }
