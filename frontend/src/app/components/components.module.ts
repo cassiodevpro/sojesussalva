@@ -4,22 +4,24 @@ import { ContructionComponent } from './contruction/contruction.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MembrosComponent } from './membros/membros.component';
+import { FinanceiroComponent } from './financeiro/financeiro.component';
 
 
 @NgModule({
   declarations: [
     ContructionComponent,
     LoginComponent,
-    LoginComponent,
-    MembrosComponent
+    MembrosComponent,
+    FinanceiroComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule
   ],
   exports: [
-    ContructionComponent
-
+    ContructionComponent,
+    LoginComponent,
+    FinanceiroComponent
   ]
 })
 export class ComponentsModule { }

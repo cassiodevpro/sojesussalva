@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: sjs-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: bd_sjs
+    ports:
+      # 3307 no host para não colidir com um MySQL local já rodando na 3306
+      - "3307:3306"
+    volumes:
+      - sjs_mysql_data:/var/lib/mysql
+
+volumes:
+  sjs_mysql_data:

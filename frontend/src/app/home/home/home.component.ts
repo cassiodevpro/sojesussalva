@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  constructor(public router: Router) {}
+  constructor(public router: Router, public authService: AuthService) {}
 
   irParaConstrucao(): void {
     this.router.navigate(['construcao']);
@@ -15,5 +16,14 @@ export class HomeComponent {
 
   logar(): void {
     this.router.navigate(['login']);
+  }
+
+  irParaFinanceiro(): void {
+    this.router.navigate(['financeiro']);
+  }
+
+  sair(): void {
+    this.authService.logout();
+    this.router.navigate(['/']);
   }
 }

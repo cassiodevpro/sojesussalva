@@ -10,8 +10,14 @@
         <li class="nav-item"><a class="nav-link" (click)="irParaConstrucao()">Obreiros</a></li>
         <li class="nav-item"><a class="nav-link" (click)="irParaConstrucao()">Membros</a></li>
         <li class="nav-item"><a class="nav-link" (click)="irParaConstrucao()">Departamentos</a></li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="authService.isAdmin()">
+          <a class="nav-link" (click)="irParaFinanceiro()">Financeiro</a>
+        </li>
+        <li class="nav-item" *ngIf="!authService.isLoggedIn()">
           <a class="btn btn-outline-light ms-3" (click)="logar()">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="btn btn-outline-light ms-3" (click)="sair()">Sair</a>
         </li>
 
       </ul>
@@ -49,16 +55,6 @@
   </div>
 </section>
 
-<!-- Seção do Convite com título acima da imagem -->
-<section class="convite-section text-center">
-  <div class="convite-titulo mb-4">
-    <h2 class="fw-bold">CONGRESSOS</h2>
-    <p class="fs-4">EM BREVE!! </p>
-    <p class="fs-4">VARIOS CONGRESSOS DURANTE O ANO</p>
-  </div>
-  <img src="assets/photos/logoSJS.png" alt="Convite Especial" class="img-fluid convite-img">
-</section>
-
 <!-- Tabela de Cultos -->
 <section class="py-5 bg-white">
   <div class="container">
@@ -84,7 +80,7 @@
             <td>19:30</td>
           </tr>
           <tr>
-            <td>Sábado</td>
+            <td>Domingo</td>
             <td>Consagração</td>
             <td>08:00</td>
           </tr>
