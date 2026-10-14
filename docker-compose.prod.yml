@@ -2,6 +2,9 @@ services:
   mysql:
     image: mysql:8
     container_name: sjs-mysql
+    # Limite de memória na VPS compartilhada (MySQL usa ~450 MiB)
+    mem_limit: 768m
+    memswap_limit: 1024m
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
@@ -13,6 +16,9 @@ services:
   backend:
     build: ./backend
     container_name: sjs-backend
+    # Limite de memória na VPS compartilhada (backend Java usa ~360 MiB)
+    mem_limit: 1280m
+    memswap_limit: 1536m
     restart: unless-stopped
     depends_on:
       - mysql
